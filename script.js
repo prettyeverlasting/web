@@ -62,3 +62,6 @@ backToTopBtn.addEventListener('click', (e) => {
   });
 });
 
+// Update the copyright year in the footer
+const copyrightYear = document.getElementById('copyright-year');
+copyrightYear.textContent = new Date().getFullYear();
