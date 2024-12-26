@@ -128,3 +128,25 @@ footer {
   text-align: center;
   font-size: 14px;
 }
+
+.back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #9b59b6;
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 5px;
+  text-decoration: none;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.back-to-top.show {
+  opacity: 1;
+}
+
+.back-to-top i {
+  font-size: 20px;
+}
+
