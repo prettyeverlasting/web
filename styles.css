@@ -1,7 +1,5 @@
-/* Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400;700&display=swap');
 
-/* Global Styles */
 body {
   font-family: 'Roboto', sans-serif;
   margin: 0;
@@ -10,56 +8,19 @@ body {
   color: #f1f1f1;
 }
 
-/* Header Styles */
 header {
-  background-color: #1f1f1f;
-  padding: 20px;
-}
-
-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.logo a {
-  font-family: 'Poppins', sans-serif;
-  font-size: 24px;
-  font-weight: 700;
-  color: #fff;
-  text-decoration: none;
-}
-
-nav ul {
-  list-style: none;
-  display: flex;
-  gap: 20px;
-}
-
-nav ul a {
-  color: #f1f1f1;
-  text-decoration: none;
-  transition: color 0.3s;
-}
-
-nav ul a:hover {
-  color: #9b59b6;
-}
-
-/* Hero Section Styles */
-#hero {
+  background-image: url('hero-background.jpg');
+  background-size: cover;
+  background-position: center;
   height: 80vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url('sky-background.jpg');
-  background-size: cover;
-  background-position: center;
   position: relative;
   z-index: 1;
 }
 
-#hero::before {
+header::before {
   content: '';
   position: absolute;
   top: 0;
@@ -72,11 +33,12 @@ nav ul a:hover {
 
 .hero-content {
   text-align: center;
-  color: #fff;
+  max-width: 800px;
+  padding: 0 20px;
 }
 
 .hero-content h1 {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 48px;
   margin-bottom: 16px;
 }
@@ -101,13 +63,12 @@ nav ul a:hover {
   background-color: #8e44ad;
 }
 
-/* Other Section Styles */
 section {
   padding: 80px 20px;
 }
 
 h2 {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 32px;
   margin-bottom: 24px;
 }
@@ -117,7 +78,29 @@ p {
   line-height: 1.6;
 }
 
-/* Footer Styles */
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+blockquote {
+  font-size: 24px;
+  font-style: italic;
+  margin: 40px 0;
+}
+
+cite {
+  display: block;
+  font-size: 18px;
+  font-style: normal;
+  margin-top: 8px;
+}
+
 footer {
   background-color: #1f1f1f;
   padding: 20px;
