@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Pretty Everlasting</title>
   <link rel="stylesheet" href="styles.css">
-  <script src="https://kit.fontawesome.com/your-font-awesome-kit.js" crossorigin="anonymous"></script>
 </head>
 <body>
   <header>
@@ -102,6 +101,9 @@
 
   <footer>
     <p>&copy; 2021-<span id="copyright-year"></span> Pretty Everlasting. All rights reserved.</p>
+    <script>
+      document.getElementById('copyright-year').textContent = new Date().getFullYear();
+    </script>
   </footer>
 
   <a href="#" class="back-to-top">
