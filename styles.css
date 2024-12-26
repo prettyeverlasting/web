@@ -1,31 +1,126 @@
-/* Set a dark background color */
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Roboto:wght@400;700&display=swap');
+
+/* Global Styles */
 body {
-  background-color: #121212;
-  color: #f1f1f1;
-  font-family: 'Roboto', Arial, sans-serif;
+  font-family: 'Roboto', sans-serif;
   margin: 0;
   padding: 0;
+  background-color: #121212;
+  color: #f1f1f1;
 }
 
-/* Style the main content area */
-main {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 40px;
+/* Header Styles */
+header {
+  background-color: #1f1f1f;
+  padding: 20px;
 }
 
-/* Style headings */
-h1, h2, h3 {
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo a {
+  font-family: 'Poppins', sans-serif;
+  font-size: 24px;
+  font-weight: 700;
   color: #fff;
-  font-family: 'Montserrat', sans-serif;
-}
-
-/* Style links */
-a {
-  color: #9b59b6;
   text-decoration: none;
 }
 
-a:hover {
-  color: #8e44ad;
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav ul a {
+  color: #f1f1f1;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+nav ul a:hover {
+  color: #9b59b6;
+}
+
+/* Hero Section Styles */
+#hero {
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url('sky-background.jpg');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  z-index: 1;
+}
+
+#hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(18, 18, 18, 0.6);
+  z-index: -1;
+}
+
+.hero-content {
+  text-align: center;
+  color: #fff;
+}
+
+.hero-content h1 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 48px;
+  margin-bottom: 16px;
+}
+
+.hero-content p {
+  font-size: 24px;
+  margin-bottom: 32px;
+}
+
+.cta {
+  display: inline-block;
+  background-color: #9b59b6;
+  color: #fff;
+  text-decoration: none;
+  padding: 12px 24px;
+  border-radius: 4px;
+  font-size: 18px;
+  transition: background-color 0.3s;
+}
+
+.cta:hover {
+  background-color: #8e44ad;
+}
+
+/* Other Section Styles */
+section {
+  padding: 80px 20px;
+}
+
+h2 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 32px;
+  margin-bottom: 24px;
+}
+
+p {
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+/* Footer Styles */
+footer {
+  background-color: #1f1f1f;
+  padding: 20px;
+  text-align: center;
+  font-size: 14px;
 }
