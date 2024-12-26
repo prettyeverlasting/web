@@ -13,31 +13,24 @@
         <a href="#">Pretty Everlasting</a>
       </div>
       <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#shows">Shows</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#tour">Tour</a></li>
         <li><a href="#merchandise">Merchandise</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="#contact">Contact Us</a></li>
+        <li><a href="#press">Press</a></li>
       </ul>
     </nav>
   </header>
 
   <main>
-    <section id="hero">
-      <div class="hero-content">
-        <h1>Welcome to Pretty Everlasting</h1>
-        <p>Discover our music and connect with us</p>
-        <a href="#" class="cta">Listen Now</a>
-      </div>
-    </section>
-
     <section id="about">
       <h2>About Us</h2>
       <p>Pretty Everlasting is a talented band that creates captivating music. Learn more about our story and our passion for what we do.</p>
       <a href="#" class="read-more">Read More</a>
     </section>
 
-    <section id="shows">
-      <h2>Upcoming Shows</h2>
+    <section id="tour">
+      <h2>Tour</h2>
       <ul>
         <li>
           <h3>Stockholm, Sweden</h3>
@@ -59,17 +52,27 @@
     </section>
 
     <section id="contact">
-      <h2>Get in Touch</h2>
+      <h2>Contact Us</h2>
       <p>Have any questions or want to collaborate? Don't hesitate to reach out.</p>
       <form>
         <!-- Add your contact form here -->
       </form>
     </section>
+
+    <section id="press">
+      <h2>Press</h2>
+      <p>Check out what the media is saying about Pretty Everlasting.</p>
+      <!-- Add your press section content here -->
+    </section>
   </main>
 
-  <footer>
-    <p>&copy; 2023 Pretty Everlasting. All rights reserved.</p>
-  </footer>
+<footer>
+  <p>&copy; 2021-<span id="copyright-year"></span> Pretty Everlasting. All rights reserved.</p>
+  <script>
+    document.getElementById('copyright-year').textContent = new Date().getFullYear();
+  </script>
+</footer>
+
 
   <script src="script.js"></script>
 </body>
