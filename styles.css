@@ -6,9 +6,16 @@ body {
   padding: 0;
   background-color: #121212;
   color: #f1f1f1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
 }
 
 header {
+  width: 100%;
+  max-width: 1200px;
   background-color: #1f1f1f;
   padding: 20px;
 }
@@ -41,6 +48,11 @@ nav ul a {
 
 nav ul a:hover {
   color: #9b59b6;
+}
+
+main {
+  width: 100%;
+  max-width: 1200px;
 }
 
 section {
@@ -109,6 +121,8 @@ button:hover {
 }
 
 footer {
+  width: 100%;
+  max-width: 1200px;
   background-color: #1f1f1f;
   padding: 20px;
   text-align: center;
