@@ -1,130 +1,67 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Roboto:wght@400;700&display=swap');
-
 body {
-  font-family: 'Roboto', sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #121212;
-  color: #f1f1f1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
+    background-color: #111; /* Mörkgrå bakgrund */
+    color: white;
+    font-family: 'Arial', sans-serif; /* Välj ett modernt teckensnitt */
+    margin: 0; /* Nollställ standardmarginal */
+    padding: 0; /* Nollställ standardpadding */
+    display: flex; /* Använd Flexbox för att centrera */
+    flex-direction: column; /* Stapla element vertikalt */
+    align-items: center; /* Centrera element horisontellt */
+    min-height: 100vh; /* Gör att sidan sträcker sig över hela skärmens höjd */
 }
 
 header {
-  width: 100%;
-  max-width: 1200px;
-  background-color: #1f1f1f;
-  padding: 20px;
+    background-color: #000; /* Svart huvudrubrik */
+    padding: 20px 0; /* Padding för huvudrubriken */
+    text-align: center; /* Centrera texten i huvudrubriken */
+    width: 100%; /* Bredden på headern ska vara 100% */
 }
 
-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.logo a {
-  font-family: 'Poppins', sans-serif;
-  font-size: 24px;
-  font-weight: 700;
-  color: #fff;
-  text-decoration: none;
+.logo {
+    width: 200px; /* Anpassa storleken på logotypen */
+    height: auto;
 }
 
 nav ul {
-  list-style: none;
-  display: flex;
-  gap: 20px;
+    list-style: none; /* Ta bort listpunkter */
+    padding: 0;
+    margin: 0;
+    text-align: center;
 }
 
-nav ul a {
-  color: #f1f1f1;
-  text-decoration: none;
-  transition: color 0.3s;
+nav li {
+    display: inline-block; /* Placera menyalternativ bredvid varandra */
+    margin: 0 15px; /* Marginaler mellan menyalternativ */
 }
 
-nav ul a:hover {
-  color: #9b59b6;
+nav a {
+    color: white;
+    text-decoration: none; /* Ta bort understrykning */
 }
 
 main {
-  width: 100%;
-  max-width: 1200px;
+    padding: 20px; /* Padding för huvudinnehållet */
+    width: 100%; /* Bredden på huvudinnehållet ska vara 100% */
+    max-width: 960px; /* Begränsa bredden på huvudinnehållet */
+    box-sizing: border-box; /* Inkludera padding och border i bredden */
 }
 
 section {
-  padding: 80px 20px;
+    margin-bottom: 30px; /* Marginaler mellan sektioner */
 }
 
 h2 {
-  font-family: 'Poppins', sans-serif;
-  font-size: 32px;
-  margin-bottom: 24px;
-}
-
-p {
-  font-size: 18px;
-  line-height: 1.6;
-}
-
-.read-more {
-  color: #9b59b6;
-  text-decoration: none;
-  font-weight: 700;
-  transition: color 0.3s;
-}
-
-.read-more:hover {
-  color: #8e44ad;
-}
-
-.product-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 24px;
-}
-
-form {
-  max-width: 400px;
-  margin: 0 auto;
-}
-
-input, textarea {
-  width: 100%;
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-  margin-bottom: 16px;
-  font-size: 16px;
-}
-
-textarea {
-  height: 150px;
-}
-
-button {
-  background-color: #9b59b6;
-  color: #fff;
-  padding: 12px 24px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 16px;
-}
-
-button:hover {
-  background-color: #8e44ad;
+    color: #eee; /* Ljusgrå färg för rubriker */
+    margin-bottom: 10px;
+    text-align: center; /* Centrera rubriker */
 }
 
 footer {
-  width: 100%;
-  max-width: 1200px;
-  background-color: #1f1f1f;
-  padding: 20px;
-  text-align: center;
-  font-size: 14px;
+    background-color: #000;
+    padding: 10px 0;
+    text-align: center;
+    color: #eee;
+    position: relative;
+    bottom: 0;
+    width: 100%;
 }
