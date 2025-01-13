@@ -40,13 +40,13 @@ nav ul {
   gap: 20px;
 }
 
-a, nav ul a {
+p a, nav ul a {
   color: #f1f1f1;
   text-decoration: none;
   transition: color 0.3s;
 }
 
-a:hover, nav ul a:hover {
+p a:hover, nav ul a:hover {
   color: #9b59b6;
 }
 
