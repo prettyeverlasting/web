@@ -110,7 +110,7 @@ h4 {
   bottom: 20px;
   right: 20px;
   color: var(--foreground-color);
-  background-color: var(--primary-color);
+  /* background-color: var(--primary-color); */
   padding: 10px 15px;
   border-radius: var(--border-radius);
   text-decoration: none;
