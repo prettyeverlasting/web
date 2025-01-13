@@ -3,13 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Official page for Pretty Everlasting - a talented band delivering captivating music. Check out our gigs, merchandise, and more.">
   <title>Pretty Everlasting</title>
   <link rel="stylesheet" href="styles.css">
   <script src="https://kit.fontawesome.com/0315656033.js" crossorigin="anonymous"></script>
 </head>
 <body>
   <header>
-    <nav>
+    <nav aria-label="Main navigation">
       <div class="logo">
         <a href="#">Pretty Everlasting</a>
       </div>
@@ -27,7 +28,6 @@
     <section id="about">
       <h2>About Us</h2>
       <p>Pretty Everlasting is a talented band that creates captivating music. Learn more about our story and our passion for what we do.</p>
-      <!-- <a href="#" class="read-more">Read More</a> -->
     </section>
 
     <section id="gigs">
@@ -38,7 +38,7 @@
           <li>
             <h4>V-Dala Nation, Uppsala</h4>
             <p>2025-01-30</p>
-            <p><a href="https://www.facebook.com/events/494083356621886" target="_blank">Event link</a></p>
+            <p><a href="https://www.facebook.com/events/494083356621886" target="_blank" rel="noopener noreferrer">Event link</a></p>
           </li>
         </ul>
       </div>
@@ -51,7 +51,7 @@
           </li>
         </ul>
       </div>
-      <div class="Earlier-gigs">
+      <div class="earlier-gigs">
         <h3>Previous Gigs</h3>
         <ul>
           <li>
@@ -82,7 +82,16 @@
       <h2>Merchandise</h2>
       <p>Check out our latest merch and show your support for Pretty Everlasting.</p>
       <div class="product-grid">
-        <!-- Add your merchandise items here -->
+        <div class="product-item">
+          <img src="tshirt.jpg" alt="Pretty Everlasting T-shirt" loading="lazy">
+          <h4>Band T-shirt</h4>
+          <p>Price: $25</p>
+        </div>
+        <div class="product-item">
+          <img src="cap.jpg" alt="Pretty Everlasting Cap" loading="lazy">
+          <h4>Band Cap</h4>
+          <p>Price: $20</p>
+        </div>
       </div>
     </section>
 
@@ -90,17 +99,25 @@
       <h2>Contact Us</h2>
       <p>Have any questions or want to collaborate? Don't hesitate to reach out.</p>
       <form>
-        <!-- Add your contact form here -->
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" placeholder="Your name" required>
+        
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Your email" required>
+        
+        <label for="message">Message</label>
+        <textarea id="message" name="message" placeholder="Your message" required></textarea>
+        
+        <button type="submit">Send</button>
       </form>
     </section>
 
     <section id="press">
       <h2>Press</h2>
       <p>Check out what the media is saying about Pretty Everlasting.</p>
-      <!-- Add your press section content here -->
     </section>
 
-    <a href="#" class="back-to-top">
+    <a href="#" class="back-to-top" aria-label="Back to top">
       <i class="fa-solid fa-circle-arrow-up fa-2xl" style="color: #74C0FC;"></i>
     </a>
   </main>
@@ -112,6 +129,15 @@
     </script>
   </footer>
 
-  <script src="script.js"></script>
+  <script>
+    const backToTopButton = document.querySelector('.back-to-top');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 200) {
+        backToTopButton.classList.add('show');
+      } else {
+        backToTopButton.classList.remove('show');
+      }
+    });
+  </script>
 </body>
 </html>
