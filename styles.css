@@ -24,6 +24,7 @@ body {
   justify-content: center;
   min-height: 100vh;
 }
+
 header, footer {
   width: 100%;
   max-width: 1200px;
@@ -61,6 +62,48 @@ nav ul a:hover {
   color: var(--primary-color);
 }
 
+/* Paragrafer */
+p {
+  font-size: 18px;
+  line-height: 1.6;
+}
+p a {
+  color: var(--foreground-color);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+p a:hover {
+  color: var(--primary-color);
+}
+
+/* Specifik styling för länkar i Gigs */
+.event-link {
+  color: var(--foreground-color);
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+.event-link:hover {
+  color: var(--primary-hover);
+  text-decoration: underline;
+}
+
+/* Rubriker */
+h2 {
+  font-family: var(--font-secondary);
+  font-size: 32px;
+  margin-bottom: 24px;
+}
+h3 {
+  font-family: var(--font-secondary);
+  font-size: 24px;
+  margin-bottom: 16px;
+}
+h4 {
+  font-family: var(--font-secondary);
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
 /* Back to top-knappen */
 .back-to-top {
   position: fixed;
@@ -82,4 +125,18 @@ nav ul a:hover {
 }
 .back-to-top:hover {
   background-color: var(--primary-hover);
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  header, main, footer {
+    max-width: 100%;
+  }
+  nav ul {
+    flex-direction: column;
+    gap: 16px;
+  }
+  section {
+    padding: 40px 10px;
+  }
 }
