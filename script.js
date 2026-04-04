@@ -4,7 +4,7 @@
 
 /* ── BandsInTown config ───────────────────────────────────── */
 const BANDSINTOWN_ARTIST = 'Pretty Everlasting';
-const BANDSINTOWN_APP_ID = '3a517c40c6ce4c894fc4254e9c08a558';
+const BANDSINTOWN_APP_ID = '0d03b154369e6470b0ed5c1f24ed1c09';
 
 // Kända tidigare spelningar – visas som fallback om API inte svarar
 // eller om BandsInTown inte har historiska spelningar
@@ -168,12 +168,6 @@ function renderFallbackShows() {
 }
 
 async function fetchShows() {
-  // Skip API call if placeholder app ID is still in place
-  if (BANDSINTOWN_APP_ID === '3a517c40c6ce4c894fc4254e9c08a558') {
-    renderFallbackShows();
-    return;
-  }
-
   try {
     const url = `https://rest.bandsintown.com/artists/${encodeURIComponent(BANDSINTOWN_ARTIST)}/events?app_id=${encodeURIComponent(BANDSINTOWN_APP_ID)}`;
     const res = await fetch(url);
