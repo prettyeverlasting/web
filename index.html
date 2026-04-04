@@ -1,143 +1,445 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sv">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Official page for Pretty Everlasting - a talented band delivering captivating music. Check out our gigs, merchandise, and more.">
+  <meta name="description" content="Pretty Everlasting – Indierock/Indiepop från Uppsala. Lyssna på musik, kolla in kommande spelningar och hitta vår merch.">
   <title>Pretty Everlasting</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
-  <script src="https://kit.fontawesome.com/0315656033.js" crossorigin="anonymous"></script>
 </head>
 <body>
-  <header>
-    <nav aria-label="Main navigation">
-      <div class="logo">
-        <a href="#">Pretty Everlasting</a>
-      </div>
-      <ul>
-        <li><a href="#about">About Us</a></li>
-        <li><a href="#gigs">Gigs</a></li>
-        <li><a href="#merchandise">Merchandise</a></li>
-        <li><a href="#contact">Contact Us</a></li>
-        <li><a href="#press">Press</a></li>
+
+  <!-- ============================================================
+       HEADER / NAVIGATION
+       ============================================================ -->
+  <header id="site-header">
+    <nav class="nav-container">
+      <a href="#hero" class="nav-brand" aria-label="Hem">
+        <img src="logo.png" alt="Pretty Everlasting"
+             onerror="this.style.display='none'; document.getElementById('nav-brand-text').style.display='block'">
+        <span id="nav-brand-text" style="display:none">Pretty Everlasting</span>
+      </a>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Öppna meny" aria-expanded="false" aria-controls="nav-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="nav-menu" id="nav-menu" role="list">
+        <li><a href="#music">Musik</a></li>
+        <li><a href="#shows">Spelningar</a></li>
+        <li><a href="#merch">Merch</a></li>
+        <li><a href="#about">Om oss</a></li>
+        <li><a href="#instagram">Instagram</a></li>
+        <li><a href="#epk">Press</a></li>
+        <li><a href="#contact">Kontakt</a></li>
       </ul>
     </nav>
   </header>
 
-  <main>
-    <section id="about">
-      <h2>About Us</h2>
-      <p>Pretty Everlasting is a talented band that creates captivating music. Learn more about our story and our passion for what we do.</p>
-    </section>
-
-    <section id="gigs">
-      <h2>Gigs</h2>
-      <div class="upcoming-gig">
-        <h3>Upcoming Gigs</h3>
-        <ul>
-          <li>
-            <h4>V-Dala Nation, Uppsala</h4>
-            <p>2025-01-30</p>
-            <p><a href="https://www.facebook.com/events/494083356621886" target="_blank" class="event-link" rel="noopener noreferrer">Event link</a></p>
-          </li>
-        </ul>
+  <!-- ============================================================
+       HERO
+       ============================================================ -->
+  <section id="hero">
+    <div class="hero-content">
+      <img src="logo.png" alt="Pretty Everlasting" class="hero-logo"
+           onerror="this.style.display='none'; document.getElementById('hero-title').style.removeProperty('display')">
+      <h1 class="hero-title" id="hero-title" style="display:none">Pretty Everlasting</h1>
+      <p class="hero-tagline">Indierock &middot; Indiepop &middot; Uppsala</p>
+      <div class="hero-ctas">
+        <a href="https://open.spotify.com/artist/32hGopKNztaZrl9ncDDTWM"
+           target="_blank" rel="noopener" class="btn btn-primary">
+          <svg class="btn-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/>
+          </svg>
+          Lyssna på Spotify
+        </a>
+        <a href="#shows" class="btn btn-outline">Kommande spelningar</a>
       </div>
-      <div class="latest-gig">
-        <h3>Latest Gig</h3>
-        <ul>
-          <li>
-            <h4>Williams Pub, Uppsala</h4>
-            <p>2024-02-10</p>
-          </li>
-        </ul>
-      </div>
-      <div class="earlier-gigs">
-        <h3>Previous Gigs</h3>
-        <ul>
-          <li>
-            <h4>Kalmar nation, Uppsala</h4>
-            <p>2023-12-05</p>
-          </li>
-          <li>
-            <h4>Kalmar nation, Uppsala</h4>
-            <p>2023-03-19</p>
-          </li>
-          <li>
-            <h4>Kalmar nation, Uppsala</h4>
-            <p>2021-11-20</p>
-          </li>
-          <li>
-            <h4>Kalmar nation, Uppsala</h4>
-            <p>2021-10-08</p>
-          </li>
-          <li>
-            <h4>Uplands nation, Uppsala</h4>
-            <p>2021-08-14</p>
-          </li>
-        </ul>
-      </div>
-    </section>
-
-    <section id="merchandise">
-      <h2>Merchandise</h2>
-      <p>Check out our latest merch and show your support for Pretty Everlasting.</p>
-      <div class="product-grid">
-        <div class="product-item">
-          <img src="tshirt.jpg" alt="Pretty Everlasting T-shirt" loading="lazy">
-          <h4>Band T-shirt</h4>
-          <p>Price: $25</p>
-        </div>
-        <div class="product-item">
-          <img src="cap.jpg" alt="Pretty Everlasting Cap" loading="lazy">
-          <h4>Band Cap</h4>
-          <p>Price: $20</p>
-        </div>
-      </div>
-    </section>
-
-    <section id="contact">
-      <h2>Contact Us</h2>
-      <p>Have any questions or want to collaborate? Don't hesitate to reach out.</p>
-      <form>
-        <label for="name">Name</label>
-        <input type="text" id="name" name="name" placeholder="Your name" required>
-        
-        <label for="email">Email</label>
-        <input type="email" id="email" name="email" placeholder="Your email" required>
-        
-        <label for="message">Message</label>
-        <textarea id="message" name="message" placeholder="Your message" required></textarea>
-        
-        <button type="submit">Send</button>
-      </form>
-    </section>
-
-    <section id="press">
-      <h2>Press</h2>
-      <p>Check out what the media is saying about Pretty Everlasting.</p>
-    </section>
-
-    <a href="#" class="back-to-top" aria-label="Back to top">
-      <i class="fa-solid fa-circle-arrow-up fa-2xl" style="color: #74C0FC;"></i>
+    </div>
+    <a href="#music" class="hero-scroll" aria-label="Scrolla ned">
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/>
+      </svg>
     </a>
+  </section>
+
+  <main>
+
+    <!-- ============================================================
+         MUSIK
+         ============================================================ -->
+    <section id="music">
+      <div class="container">
+        <h2>Musik</h2>
+        <p class="section-lead">Lyssna på Pretty Everlasting på Spotify.</p>
+        <div class="spotify-wrap">
+          <iframe
+            src="https://open.spotify.com/embed/artist/32hGopKNztaZrl9ncDDTWM?utm_source=generator&theme=0"
+            width="100%"
+            height="380"
+            frameborder="0"
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+            loading="lazy"
+            title="Pretty Everlasting på Spotify">
+          </iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         SPELNINGAR
+         ============================================================ -->
+    <section id="shows" class="section-alt">
+      <div class="container">
+        <h2>Spelningar</h2>
+        <div class="shows-block">
+          <h3>Kommande</h3>
+          <!-- Fylls dynamiskt av script.js via BandsInTown API -->
+          <!-- REPLACE: Sätt ert BandsInTown App ID i script.js (BANDSINTOWN_APP_ID) -->
+          <div id="shows-upcoming-list" class="shows-list">
+            <p class="shows-loading">Laddar spelningar<span class="loading-dots"></span></p>
+          </div>
+        </div>
+        <div class="shows-block shows-block--past">
+          <h3>Tidigare spelningar</h3>
+          <!-- Fylls dynamiskt av script.js – med statisk fallback om API ej svarar -->
+          <div id="shows-past-list" class="shows-list"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         MERCH
+         ============================================================ -->
+    <section id="merch">
+      <div class="container">
+        <h2>Merch</h2>
+        <p class="section-lead">Visa ditt stöd för Pretty Everlasting.</p>
+        <div class="merch-grid">
+
+          <!-- Produkt 1: Svart t-shirt -->
+          <!-- REPLACE: Uppdatera Stripe-länken -->
+          <article class="merch-card">
+            <div class="merch-img-wrap">
+              <img src="images/tshirt-black.jpg" alt="Pretty Everlasting svart t-shirt" loading="lazy"
+                   onerror="this.parentElement.classList.add('merch-img-missing')">
+              <div class="merch-img-placeholder" aria-hidden="true">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M16 2v4H8V2H2L0 8l3 1v13h18V9l3-1-2-6h-6zm2 18H6V9h12v11zm-4-8H10v-2h4v2z"/>
+                </svg>
+              </div>
+            </div>
+            <div class="merch-info">
+              <h3>T-shirt – Svart</h3>
+              <p>Klassisk svart t-shirt med Pretty Everlasting-tryck. Finns i XS–XXL.</p>
+              <p class="merch-price">250 kr</p>
+              <!-- REPLACE: Skapa Stripe Payment Link → byt ut href-värdet -->
+              <a href="REPLACE_WITH_STRIPE_LINK_BLACK_TSHIRT" target="_blank" rel="noopener" class="btn btn-primary">Köp nu</a>
+            </div>
+          </article>
+
+          <!-- Produkt 2: Vit t-shirt -->
+          <!-- REPLACE: Uppdatera Stripe-länken -->
+          <article class="merch-card">
+            <div class="merch-img-wrap">
+              <img src="images/tshirt-white.jpg" alt="Pretty Everlasting vit t-shirt" loading="lazy"
+                   onerror="this.parentElement.classList.add('merch-img-missing')">
+              <div class="merch-img-placeholder" aria-hidden="true">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M16 2v4H8V2H2L0 8l3 1v13h18V9l3-1-2-6h-6zm2 18H6V9h12v11zm-4-8H10v-2h4v2z"/>
+                </svg>
+              </div>
+            </div>
+            <div class="merch-info">
+              <h3>T-shirt – Vit</h3>
+              <p>Vit t-shirt med Pretty Everlasting-tryck. Finns i XS–XXL.</p>
+              <p class="merch-price">250 kr</p>
+              <!-- REPLACE: Skapa Stripe Payment Link → byt ut href-värdet -->
+              <a href="REPLACE_WITH_STRIPE_LINK_WHITE_TSHIRT" target="_blank" rel="noopener" class="btn btn-primary">Köp nu</a>
+            </div>
+          </article>
+
+          <!-- Produkt 3: Kapsylöppnare -->
+          <!-- REPLACE: Uppdatera Stripe-länken -->
+          <article class="merch-card">
+            <div class="merch-img-wrap">
+              <img src="images/bottleopener.jpg" alt="Pretty Everlasting kapsylöppnare" loading="lazy"
+                   onerror="this.parentElement.classList.add('merch-img-missing')">
+              <div class="merch-img-placeholder" aria-hidden="true">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M16 2v4H8V2H2L0 8l3 1v13h18V9l3-1-2-6h-6zm2 18H6V9h12v11zm-4-8H10v-2h4v2z"/>
+                </svg>
+              </div>
+            </div>
+            <div class="merch-info">
+              <h3>Kapsylöppnare</h3>
+              <p>Kapsylöppnare i diverse färger. Välj färg vid beställning.</p>
+              <p class="merch-price">75 kr</p>
+              <!-- REPLACE: Skapa Stripe Payment Link → byt ut href-värdet -->
+              <a href="REPLACE_WITH_STRIPE_LINK_BOTTLEOPENER" target="_blank" rel="noopener" class="btn btn-primary">Köp nu</a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         OM OSS
+         ============================================================ -->
+    <section id="about" class="section-alt">
+      <div class="container">
+        <h2>Om oss</h2>
+        <div class="about-layout">
+          <div class="about-text">
+            <!-- REPLACE: Uppdatera med er bandbio -->
+            <p>Pretty Everlasting är ett indierock/indiepop-band från Uppsala. Vi spelar musik som rör sig i gränslandet mellan det melodiösa och det råa – med influenser från 90-talets brittiska indievåg till modern indiepop.</p>
+            <p>Bandet bildades och har sedan dess spelat på scener runt om i Uppsala. Vi fortsätter att skriva och framföra ny musik.</p>
+            <div class="about-socials">
+              <a href="https://www.instagram.com/pretty.everlasting/" target="_blank" rel="noopener" class="social-icon-link" aria-label="Instagram">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
+                </svg>
+              </a>
+              <a href="https://www.facebook.com/prettyeverlastingband" target="_blank" rel="noopener" class="social-icon-link" aria-label="Facebook">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                </svg>
+              </a>
+              <a href="https://open.spotify.com/artist/32hGopKNztaZrl9ncDDTWM" target="_blank" rel="noopener" class="social-icon-link" aria-label="Spotify">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+          <!-- REPLACE: Avkommentera och lägg till images/band-photo.jpg för ett gruppfoto -->
+          <!--
+          <div class="about-photo">
+            <img src="images/band-photo.jpg" alt="Pretty Everlasting">
+          </div>
+          -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         INSTAGRAM
+         ============================================================ -->
+    <section id="instagram">
+      <div class="container">
+        <h2>Instagram</h2>
+        <p class="section-lead">
+          Följ oss på
+          <a href="https://www.instagram.com/pretty.everlasting" target="_blank" rel="noopener">@pretty.everlasting</a>
+          för det senaste.
+        </p>
+
+        <div class="behold-placeholder" id="instagram-placeholder">
+          <p>Instagram-flöde konfigureras via Behold.so</p>
+          <a href="https://behold.so" target="_blank" rel="noopener" class="btn btn-outline btn-sm">Konfigurera Behold.so</a>
+        </div>
+
+        <div data-behold-id="R3RjsWSOH0gNgcFKuSga"></div>
+        <script>
+            (function() {
+             const d=document,s=d.createElement("script");s.type="module";
+              s.src="https://w.behold.so/widget.js";d.head.append(s);
+            })();
+        </script>
+
+      </div>
+    </section>
+
+    <!-- ============================================================
+         PRESS / EPK
+         ============================================================ -->
+    <section id="epk" class="section-alt">
+      <div class="container">
+        <h2>Press / EPK</h2>
+        <p class="section-lead">Electronic Press Kit för Pretty Everlasting.</p>
+        <div class="epk-grid">
+
+          <div class="epk-about">
+            <h3>Snabbfakta</h3>
+            <!-- REPLACE: Uppdatera med korrekt info -->
+            <dl class="epk-facts">
+              <dt>Genre</dt><dd>Indierock / Indiepop</dd>
+              <dt>Hemort</dt><dd>Uppsala, Sverige</dd>
+              <dt>Aktivt sedan</dt><dd>2020</dd>
+            </dl>
+            <p>
+              <!-- REPLACE: Lägg till er korta presstext (2–3 meningar) -->
+              Pretty Everlasting är ett indierock/indiepop-band från Uppsala. [LÄGG TILL ER PRESSTEXT HÄR].
+            </p>
+            <div class="epk-ext-links">
+              <a href="https://open.spotify.com/artist/32hGopKNztaZrl9ncDDTWM" target="_blank" rel="noopener" class="epk-link">Spotify</a>
+              <a href="https://www.instagram.com/pretty.everlasting" target="_blank" rel="noopener" class="epk-link">Instagram</a>
+              <a href="https://www.facebook.com/prettyeverlastingband" target="_blank" rel="noopener" class="epk-link">Facebook</a>
+              <a href="https://www.bandsintown.com/a/15586285" target="_blank" rel="noopener" class="epk-link">BandsInTown</a>
+            </div>
+          </div>
+
+          <div class="epk-downloads">
+            <h3>Nedladdningar</h3>
+            <!-- REPLACE: Lägg till filer i en epk/-mapp och uppdatera href-länkarna -->
+            <ul class="download-list">
+              <li>
+                <a href="epk/pretty-everlasting-bio.pdf" download class="download-item">
+                  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/>
+                  </svg>
+                  Bandbio (PDF)
+                </a>
+              </li>
+              <li>
+                <a href="epk/pretty-everlasting-press-photos.zip" download class="download-item">
+                  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/>
+                  </svg>
+                  Pressfoton (ZIP)
+                </a>
+              </li>
+              <li>
+                <a href="epk/pretty-everlasting-tech-rider.pdf" download class="download-item">
+                  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/>
+                  </svg>
+                  Tech rider (PDF)
+                </a>
+              </li>
+              <li>
+                <a href="logo.png" download class="download-item">
+                  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/>
+                  </svg>
+                  Logotyp (PNG)
+                </a>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         KONTAKT
+         ============================================================ -->
+    <section id="contact">
+      <div class="container">
+        <h2>Kontakt</h2>
+        <p class="section-lead">Bokningsförfrågningar, pressförfrågningar eller bara ett hej – hör av dig!</p>
+        <div class="contact-layout">
+
+          <form
+            action="https://formspree.io/f/xjgppoeg"
+            method="POST"
+            class="contact-form"
+            id="contact-form"
+            novalidate>
+            <div class="form-group">
+              <label for="contact-name">Namn</label>
+              <input type="text" id="contact-name" name="name" placeholder="Ditt namn" required autocomplete="name">
+            </div>
+            <div class="form-group">
+              <label for="contact-email">E-post</label>
+              <input type="email" id="contact-email" name="email" placeholder="din@email.se" required autocomplete="email">
+            </div>
+            <div class="form-group">
+              <label for="contact-subject">Ämne</label>
+              <select id="contact-subject" name="subject">
+                <option value="general">Allmänt</option>
+                <option value="booking">Bokning</option>
+                <option value="press">Press</option>
+                <option value="merch">Merch</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="contact-message">Meddelande</label>
+              <textarea id="contact-message" name="message" placeholder="Ditt meddelande..." rows="5" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary" id="form-submit-btn">Skicka</button>
+            <p class="form-status" id="form-status" aria-live="polite" role="status"></p>
+          </form>
+
+          <div class="contact-socials">
+            <h3>Hitta oss</h3>
+            <ul class="social-links-list">
+              <!-- REPLACE: Uppdatera alla REPLACE-värden -->
+              <li>
+                <a href="https://www.instagram.com/pretty.everlasting" target="_blank" rel="noopener">
+                  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
+                  </svg>
+                  Instagram
+                </a>
+              </li>
+              <li>
+                <a href="https://www.facebook.com/prettyeverlastingband" target="_blank" rel="noopener">
+                  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                  </svg>
+                  Facebook
+                </a>
+              </li>
+              <li>
+                <a href="https://open.spotify.com/artist/32hGopKNztaZrl9ncDDTWM" target="_blank" rel="noopener">
+                  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/>
+                  </svg>
+                  Spotify
+                </a>
+              </li>
+              <li>
+                <a href="https://www.bandsintown.com/a/15586285" target="_blank" rel="noopener">
+                  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/>
+                  </svg>
+                  BandsInTown
+                </a>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
   </main>
 
-  <footer>
-    <p>&copy; 2021–<span id="copyright-year"></span> Pretty Everlasting. All rights reserved.</p>
-    <script>
-      document.getElementById('copyright-year').textContent = new Date().getFullYear();
-    </script>
+  <!-- ============================================================
+       FOOTER
+       ============================================================ -->
+  <footer id="site-footer">
+    <div class="container footer-inner">
+      <a href="#hero" class="footer-brand" aria-label="Tillbaka till toppen">
+        <img src="logo.png" alt="Pretty Everlasting" height="28"
+             onerror="this.style.display='none'; document.getElementById('footer-brand-text').style.display='block'">
+        <span id="footer-brand-text" style="display:none">Pretty Everlasting</span>
+      </a>
+      <nav class="footer-nav" aria-label="Sidnavigation">
+        <a href="#music">Musik</a>
+        <a href="#shows">Spelningar</a>
+        <a href="#merch">Merch</a>
+        <a href="#about">Om oss</a>
+        <a href="#epk">Press</a>
+        <a href="#contact">Kontakt</a>
+      </nav>
+      <p class="footer-copy">&copy; 2021–<span id="copyright-year"></span> Pretty Everlasting. Alla rättigheter förbehållna.</p>
+    </div>
   </footer>
 
-  <script>
-    const backToTopButton = document.querySelector('.back-to-top');
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 200) {
-        backToTopButton.classList.add('show');
-      } else {
-        backToTopButton.classList.remove('show');
-      }
-    });
-  </script>
+  <!-- Back to top -->
+  <a href="#hero" class="back-to-top" id="back-to-top" aria-label="Tillbaka till toppen">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6 1.41 1.41z"/>
+    </svg>
+  </a>
+
+  <script src="script.js"></script>
 </body>
 </html>
