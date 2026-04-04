@@ -447,12 +447,12 @@ section {
 
 .about-text p { color: var(--text-muted); line-height: 1.8; }
 
-.about-socials {
+.band-links {
   display: flex;
   gap: 1rem;
   margin-top: 1.5rem;
 }
-.social-icon-link {
+.band-icon-btn {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -463,26 +463,18 @@ section {
   color: var(--text-muted);
   transition: color var(--t), border-color var(--t), background-color var(--t);
 }
-.social-icon-link:hover {
+.band-icon-btn:hover {
   color: var(--accent);
   border-color: var(--accent);
   background-color: rgba(200, 169, 110, 0.08);
 }
-.social-icon-link svg { width: 18px; height: 18px; fill: currentColor; }
+.band-icon-btn svg { width: 18px; height: 18px; fill: currentColor; }
 
 /* ── Instagram / Behold ───────────────────────────────────── */
-.behold-placeholder {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 1.25rem;
-  padding: 3rem 2rem;
-  border: 1px dashed var(--border);
-  border-radius: var(--radius-lg);
-  text-align: center;
-  color: var(--text-muted);
-  min-height: 200px;
+[data-behold-id] {
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
 }
 
 /* ── EPK ──────────────────────────────────────────────────── */
@@ -600,8 +592,8 @@ section {
   margin-bottom: 1.25rem;
 }
 
-.social-links-list { display: flex; flex-direction: column; gap: 0.5rem; }
-.social-links-list a {
+.contact-channels { display: flex; flex-direction: column; gap: 0.5rem; }
+.contact-channels a {
   display: flex;
   align-items: center;
   gap: 0.75rem;
@@ -611,11 +603,11 @@ section {
   color: var(--text-muted);
   transition: color var(--t), background-color var(--t);
 }
-.social-links-list a:hover {
+.contact-channels a:hover {
   color: var(--text);
   background-color: var(--bg-card);
 }
-.social-links-list svg { width: 18px; height: 18px; fill: currentColor; flex-shrink: 0; }
+.contact-channels svg { width: 18px; height: 18px; fill: currentColor; flex-shrink: 0; }
 
 /* ── Footer ───────────────────────────────────────────────── */
 #site-footer {
@@ -691,8 +683,8 @@ section {
 
   .contact-layout { grid-template-columns: 1fr; gap: 3rem; }
   .contact-socials h3 { margin-top: 1rem; }
-  .social-links-list { flex-direction: row; flex-wrap: wrap; gap: 0.5rem; }
-  .social-links-list a { padding: 0.5rem 0.75rem; }
+  .contact-channels { flex-direction: row; flex-wrap: wrap; gap: 0.5rem; }
+  .contact-channels a { padding: 0.5rem 0.75rem; }
 }
 
 @media (max-width: 680px) {
