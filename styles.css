@@ -146,10 +146,16 @@ section {
   transition: background-color var(--t), box-shadow var(--t), backdrop-filter var(--t);
 }
 #site-header.scrolled {
+  box-shadow: 0 1px 0 var(--border);
+}
+#site-header.scrolled::before {
+  content: '';
+  position: absolute;
+  inset: 0;
   background-color: rgba(13, 13, 13, 0.95);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
-  box-shadow: 0 1px 0 var(--border);
+  z-index: -1;
 }
 
 .nav-container {
