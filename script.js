@@ -9,12 +9,16 @@ const BANDSINTOWN_APP_ID = '0d03b154369e6470b0ed5c1f24ed1c09';
 // Kända tidigare spelningar – visas som fallback om API inte svarar
 // eller om BandsInTown inte har historiska spelningar
 const PAST_SHOWS_FALLBACK = [
-  { datetime: '2024-02-10', venue: { name: 'Williams Pub',   city: 'Uppsala', country: 'Sverige' } },
-  { datetime: '2023-12-05', venue: { name: 'Kalmar nation',  city: 'Uppsala', country: 'Sverige' } },
-  { datetime: '2023-03-19', venue: { name: 'Kalmar nation',  city: 'Uppsala', country: 'Sverige' } },
-  { datetime: '2021-11-20', venue: { name: 'Kalmar nation',  city: 'Uppsala', country: 'Sverige' } },
-  { datetime: '2021-10-08', venue: { name: 'Kalmar nation',  city: 'Uppsala', country: 'Sverige' } },
-  { datetime: '2021-08-14', venue: { name: 'Uplands nation', city: 'Uppsala', country: 'Sverige' } },
+  { datetime: '2025-11-22', venue: { name: 'Geovet (private)', city: 'Uppsala',   country: 'Sverige' } },
+  { datetime: '2025-09-26', venue: { name: 'Breaking Sound',   city: 'Stockholm', country: 'Sverige' } },
+  { datetime: '2025-04-28', venue: { name: 'Poplands',         city: 'Uppsala',   country: 'Sverige' } },
+  { datetime: '2025-01-30', venue: { name: 'V-Dala nation',    city: 'Uppsala',   country: 'Sverige' } },
+  { datetime: '2024-02-10', venue: { name: "William's Pub",    city: 'Uppsala',   country: 'Sverige' } },
+  { datetime: '2023-12-05', venue: { name: 'Kalmar nation',    city: 'Uppsala',   country: 'Sverige' } },
+  { datetime: '2023-03-19', venue: { name: 'Kalmar nation',    city: 'Uppsala',   country: 'Sverige' } },
+  { datetime: '2021-11-20', venue: { name: 'Kalmar nation',    city: 'Uppsala',   country: 'Sverige' } },
+  { datetime: '2021-10-08', venue: { name: 'Kalmar nation',    city: 'Uppsala',   country: 'Sverige' } },
+  { datetime: '2021-08-14', venue: { name: 'Uplands nation',   city: 'Uppsala',   country: 'Sverige' } },
 ];
 
 /* ── Sticky header ────────────────────────────────────────── */
@@ -168,18 +172,30 @@ function renderFallbackShows() {
 }
 
 async function fetchShows() {
-  try {
-    const url = `https://rest.bandsintown.com/artists/${encodeURIComponent(BANDSINTOWN_ARTIST)}/events?app_id=${encodeURIComponent(BANDSINTOWN_APP_ID)}`;
+  const base = `https://rest.bandsintown.com/artists/${encodeURIComponent(BANDSINTOWN_ARTIST)}/events?app_id=${encodeURIComponent(BANDSINTOWN_APP_ID)}`;
+
+  async function safeFetch(url) {
     const res = await fetch(url);
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
     const data = await res.json();
-    // BandsInTown returns an error object instead of array when artist not found
-    if (!Array.isArray(data)) throw new Error('Unexpected response');
-    renderShows(data);
-  } catch (err) {
-    console.warn('BandsInTown API error:', err.message);
-    renderFallbackShows();
+    return Array.isArray(data) ? data : [];
   }
+
+  const [upcomingResult, pastResult] = await Promise.allSettled([
+    safeFetch(`${base}&date=upcoming`),
+    safeFetch(`${base}&date=past`),
+  ]);
+
+  const upcoming = upcomingResult.status === 'fulfilled' ? upcomingResult.value : null;
+  const past     = pastResult.status === 'fulfilled'     ? pastResult.value     : null;
+
+  if (upcoming === null && past === null) {
+    console.warn('BandsInTown API error:', upcomingResult.reason?.message);
+    renderFallbackShows();
+    return;
+  }
+
+  renderShows([...(upcoming ?? []), ...(past ?? [])]);
 }
 
 /* ── Contact form (Formspree async) ──────────────────────── */
